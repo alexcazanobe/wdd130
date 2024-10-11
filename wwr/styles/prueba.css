@@ -1,0 +1,32 @@
+section.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    gap: 20px; /* Espaciado entre columnas */
+    padding: 20px 0;
+    text-align: center; /* Centrar el contenido de texto */
+}
+
+section.history h2 {
+    grid-column: span 3; /* El título ocupará las 3 columnas */
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.history p:nth-of-type(1) {
+    grid-column: 1; /* Texto en la primera columna */
+    margin: 0;
+}
+
+section.history img {
+    grid-column: 2; /* Imagen en la segunda columna */
+    justify-self: center; /* Centrar la imagen */
+    width: 100%; /* Asegurar que la imagen ocupe el 100% de su contenedor */
+}
+
+section.history p:nth-of-type(2) {
+    grid-column: 3; /* Texto en la tercera columna */
+    margin: 0;
+}
+
