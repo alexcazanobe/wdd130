@@ -437,7 +437,7 @@ button:hover {
     background-color: var(--accent2-color);
     border-radius: 5px;
     text-decoration: none;
-    transition: var(--background-color) 0.3s;
+    transition: background-color 0.3s ease;
     z-index: 2;
 }
 
