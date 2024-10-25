@@ -63,16 +63,36 @@ main {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}
 .hero h1 {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--background-color);
     z-index: 2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    z-index: 2;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    
 }
 
 .hero article {
@@ -99,8 +119,13 @@ main {
   padding-right: 0.5rem;
 }
 
+.hero article p {
+    color: var(--accent1-color);
+    font-size: 1.2rem;
+}
+
 h1, h2 {
-    color: var(--primary-color);
+    color: var(--accent1-color);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -121,7 +146,7 @@ section.history {
 section.history h2 {
     grid-column: span 3;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--accent1-color);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -161,7 +186,7 @@ section.history p :nth-of-type(2) {
 
 .adventure h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--accent1-color);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -191,7 +216,7 @@ figure img {
 
 figcaption {
     font-size: 0.9rem;
-    color: var(--primary-color);
+    color: var(--accent1-color);
     margin-top: 10px;
 }
 
@@ -269,10 +294,11 @@ footer p {
 form {
     width: 650px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    background-color: #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
     display: grid;
     margin-bottom: 2rem;
 }
@@ -356,4 +382,116 @@ button {
 
 button:hover {
     background-color: var(--accent2-color);
+}
+
+.newsletter, .call-to-action, .grid-layout {
+    padding: 20px 0;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item img{
+    max-width: 100%;
+    max-height: 250px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.call-to-action {
+    text-align: center;
+    margin: 40px 0;
+    background-color: var(--accent1-color);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.call-to-action h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.call-to-action p {
+    color: var(--secondary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: var(--accent2-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--background-color) 0.3s;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+.hero .cta-button {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    background-color: var(--accent2-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero .cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: var(--accent1-color);
+    color: var(--background-color);
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: var(--accent2-color);
+    color: #fff;
 }
